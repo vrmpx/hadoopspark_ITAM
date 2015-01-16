@@ -17,7 +17,7 @@ update-java-alternatives -s java-6-sun
 # Get Hadoop
 ######################################
 cd /tmp 
-wget "$mirror/$version".tar.gz 
+wget "$mirror/$version/$version".tar.gz 
 tar -xzf "$version".tar.gz
 mv  $version /usr/local/
 rm "$version".tar.gz
@@ -27,7 +27,7 @@ rm "$version".tar.gz
 # User group + User
 ########################################
 addgroup hadoop
-adduser --ingroup hadoop hduser
+adduser --disabled-password --gecos "" --ingroup hadoop hduser
 
 ########################################
 # Hadoop Conf

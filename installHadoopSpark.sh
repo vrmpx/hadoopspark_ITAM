@@ -5,8 +5,6 @@ version=hadoop-1.2.1
 #######################################
 # Script para instalar Hadoop + Spark
 #######################################
-apt-get install --yes python-software-properties
-add-apt-repository --yes ppa:ferramroberto/java
 apt-get update
 
 # Install Sun Java 6

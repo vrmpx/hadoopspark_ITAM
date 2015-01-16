@@ -16,6 +16,8 @@ apt-get update
 #OpenJDK
 apt-get -y install openjdk-7-jre 
 
+#SSH
+apt-get -y install ssh 
 
 ######################################
 # Get Hadoop
@@ -69,8 +71,6 @@ su - hduser -c "echo | ssh-keygen -t rsa -P \"\""
 cat /home/hduser/.ssh/id_rsa.pub >> /home/hduser/.ssh/authorized_keys
 su - hduser -c "ssh -o StrictHostKeyChecking=no localhost echo " #login once, to add to known hosts
 
-su - hduser -c "/usr/local/hadoop/bin/hadoop namenode -format"
-
 ######################################
 # Get Scala
 ######################################
@@ -79,8 +79,8 @@ apt-get install --yes scala
 ######################################
 # Get Spark
 ######################################
-$sparkmirror=http://apache.webxcreen.org/spark/spark-1.2.0/
-$sparkversion=spark-1.2.0
+sparkmirror=http://apache.webxcreen.org/spark/spark-1.2.0/
+sparkversion=spark-1.2.0-bin-hadoop1
 
 cd /tmp
 wget "$sparkmirror/$sparkversion".tgz

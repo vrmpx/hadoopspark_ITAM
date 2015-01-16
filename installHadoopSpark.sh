@@ -10,8 +10,12 @@ add-apt-repository --yes ppa:ferramroberto/java
 apt-get update
 
 # Install Sun Java 6
-apt-get install --yes sun-java6-jdk
-update-java-alternatives -s java-6-sun
+#apt-get install --yes sun-java6-jdk
+#update-java-alternatives -s java-6-sun
+
+#OpenJDK
+apt-get -y install openjdk-7-jre 
+
 
 ######################################
 # Get Hadoop

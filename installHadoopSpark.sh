@@ -14,7 +14,7 @@ apt-get update
 #update-java-alternatives -s java-6-sun
 
 #OpenJDK
-apt-get -y install openjdk-7-jre 
+apt-get -y install openjdk-7-jdk 
 
 #SSH
 apt-get -y install ssh 
